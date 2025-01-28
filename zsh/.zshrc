@@ -77,6 +77,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zsh_profile
 
 # User configuration
 
@@ -107,18 +108,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias pn="pnpm"
-alias bao="cd ~/Bankme/api-oracle/"
-alias bdw="cd ~/Bankme/api-data-warehouse/"
-alias bab="cd ~/Bankme/api-bankme/"
-alias bfb="cd ~/Bankme/front-bankme/"
-alias wb="cd ~/Projects/wallet-web/"
-alias wapi="cd ~/Projects/wallet-api/"
-alias dup="docker compose up -d --build"
-alias tm="test_maker"
-alias update="sudo apt update && sudo apt upgrade -y"
-alias envprod="gcloud config set project production-svc-01 && bk ge"
-alias envstg="gcloud config set project staging-svc-01 && bk ge"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

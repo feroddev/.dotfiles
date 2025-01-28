@@ -1,0 +1,36 @@
+alias pn="pnpm"
+alias bao="cd ~/Bankme/api-oracle/"
+alias bdw="cd ~/Bankme/api-data-warehouse/"
+alias bab="cd ~/Bankme/api-bankme/"
+alias bfb="cd ~/Bankme/front-bankme/"
+alias wb="cd ~/Projects/wallet-web/"
+alias wapi="cd ~/Projects/wallet-api/"
+alias dup="docker compose up -d --build"
+alias dc="docker-compose"
+alias tm="test_maker"
+alias update="sudo apt update && sudo apt upgrade -y"
+alias envprod="gcloud config set project production-svc-01 && bk ge"
+alias envstg="gcloud config set project staging-svc-01 && bk ge"
+alias rebuild="sudo nixos-rebuild switch --flake /etc/nixos#myNixos"
+alias dvb='export PORT=3000 && yarn start:dev'
+alias dvf='export PORT=3000 && yarn dev'
+
+PROMPT="╭─ ${FG[154]}%n ${FG[239]}at ${FG[099]}$(box_name) ${FG[239]}in %B${FG[045]}%~%b${git_info}${ruby_env}${virtualenv_info}
+╰─${prompt_char}%{$reset_color%} "
+
+
+ZSH_THEME_GIT_PROMPT_PREFIX=" ${FG[239]}on%{$reset_color%} ${FG[255]}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" ${FG[202]}✘✘✘"
+ZSH_THEME_GIT_PROMPT_CLEAN=" ${FG[040]}✔"
+
+ZSH_THEME_RUBY_PROMPT_PREFIX=" ${FG[239]}using${FG[243]} ‹"
+ZSH_THEME_RUBY_PROMPT_SUFFIX="›%{$reset_color%}"
+
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+ZSH_THEME_VIRTUALENV_PREFIX=" ${FG[239]}using${FG[243]} «"
+ZSH_THEME_VIRTUALENV_SUFFIX="»%{$reset_color%}"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
+
+export PATH=$PATH:~/.npm-global/bin
